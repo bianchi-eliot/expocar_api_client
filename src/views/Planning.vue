@@ -15,7 +15,7 @@
                 @click="changeDay(tomorrowDate.tomorrowDay, 
                     tomorrowDate.tomorrowMonth, tomorrowDate.tomorrowYear)">
                 </button>
-            <Table :timeSlots="timeSlots" :hours="hours"/>
+            <Table :timeSlots="timeSlots"/>
 
         </section>
     </main>
@@ -30,7 +30,6 @@ export default {
     data() {
         return {
             url: 'http://localhost:3000/planning',
-            hours: ['08', '10', '12', '14', '16', '18'],
             timeSlots: null,
             todayDate: null,
             yesterdayDate: null,
@@ -110,51 +109,6 @@ button.selection:hover { background-color: hsl(160, 70%, 45%); }
 .yesterday { box-shadow: 2px 2px 3px hsl(160, 70%, 45%); }
 .tomorrow { box-shadow: -2px 2px 3px hsl(160, 70%, 45%); }
 
-div.planning {
-    align-self: center;
-    display: flex;
-        flex-direction: column;
-        gap: 20px;
-
-    background-color: hsl(0, 0%, 95%);
-    border-radius: 5px;
-    box-shadow: 3px 3px 3px darkgray;
-    padding: 20px 0;
-    width: 75vw;
-}
-
-.stand {
-    display: flex;
-        align-items: center;
-        gap: 10px;
-
-    background-color: var(--app-color);
-    padding-left: 18px;
-    width: 100%;
-    height: 100%;
-    overflow-x: scroll;
-}
-
-p.stand-number {
-    font-size: 19px;
-    font-weight: bold;
-}
-
-.time-slot {
-    flex-shrink: 0;
-    display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 7px;
-    background-color: var(--light-white);
-    border-radius: 3px;
-    padding: 5px 10px;
-    width: 175px;
-}
-.time-slot > img {
-    width: 75px;
-    height: 75px;
-}
-
 @media screen and (min-width: 1300px) {
     section.planning {
         flex-direction: row;
@@ -173,23 +127,5 @@ p.stand-number {
     }
 }
 
-p.hour {
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 5px;
-    margin-bottom: -10px;
-    position: relative;
-}
 
-p.hour::after {
-    content: '';
-    position: absolute;
-        top: 50%;
-        right: 0;
-    transform: translateY(-50%);
-
-    background-color: black;
-    width: 125px;
-    height: 4px;
-}
 </style>

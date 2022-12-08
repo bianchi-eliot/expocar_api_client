@@ -1,10 +1,10 @@
 <template>
     <main class="account">
-        <Informations/>
-        <section class="container-time-services">
+        <section class="container-informations-slots">
+            <Informations/>
             <TimeSlots/>
-            <Services/>
         </section>
+        <Services/>
     </main>
 </template>
 
@@ -29,7 +29,7 @@ main.account {
     width: calc(100vw - var(--navbar-width));
     padding: 5px 10px;
 }
-.container-time-services {
+.container-informations-slots {
     flex-grow: 1;
     display: flex;
         flex-direction: column;
@@ -37,7 +37,7 @@ main.account {
     width: 100%;
 }
 @media screen and (min-width: 1000px) {
-    .container-time-services {
+    .container-informations-slots {
         flex-direction: row;
     }
 
