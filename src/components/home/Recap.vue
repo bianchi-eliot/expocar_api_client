@@ -1,7 +1,7 @@
 <template>
     <section class="main-image">
         <h1>Franc-comtois Motor Show</h1> 
-        <p>1rst time 10 - 21 April 2023</p>
+        <p>1rst time 9 - 15 January 2023</p>
     </section>
     <section class="localisation">
         <h2>Located at Belchamp, in the Doubs</h2>

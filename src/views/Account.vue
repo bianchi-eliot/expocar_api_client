@@ -24,7 +24,7 @@ main.account {
     display: flex;
         flex-direction: column;
         align-items: stretch;
-        gap: 20px;
+        gap: 200px;
     color: hsl(100, 78%, 39%);
     width: calc(100vw - var(--navbar-width));
     padding: 5px 10px;
@@ -35,6 +35,7 @@ main.account {
         flex-direction: column;
         gap: 20px;
     width: 100%;
+    height: max-content;
 }
 @media screen and (min-width: 1000px) {
     .container-informations-slots {

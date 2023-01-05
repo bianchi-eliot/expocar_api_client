@@ -26,6 +26,7 @@ main.home {
     display: flex;
         flex-direction: column;
         gap: 40px;
+        
 }
 h2 {
     color: var(--app-color);

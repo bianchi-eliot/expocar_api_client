@@ -47,7 +47,7 @@ main.log-sign
 {
 	position: relative;
 	width: 800px;
-	height: 600px;
+	height: 700px;
 	background: #fff;
 	box-shadow: 0 15px 50px rgba(0,0,0,.1);
 	overflow: hidden;

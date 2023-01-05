@@ -5,6 +5,7 @@ import MapView from '../views/Map.vue'
 import PlanningView from '../views/Planning.vue'
 import LogSignView from '../views/LogSign.vue'
 import AccountView from '../views/Account.vue'
+import PieceDetails from "@/views/shop/pieces/PieceDetails.vue";
 
 const routes = [
     {
@@ -16,6 +17,11 @@ const routes = [
         path: '/shop',
         name: 'shop',
         component: ShopView
+    },
+    {
+        path: '/shop/piece/:id',
+        name: 'details_piece',
+        component: PieceDetails
     },
     {
         path: '/map',
@@ -37,6 +43,7 @@ const routes = [
         name: 'account',
         component: AccountView
     },
+
 ]
 
 const router = createRouter({
