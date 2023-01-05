@@ -95,7 +95,7 @@ export default {
                     body: JSON.stringify(data)
                 })
             const json = await responce.json()
-            if (json.data === 0) this.messageForm = 'Account successfully created'
+            if (json.data === 0) this.$router.push({ to: 'home' })
             else if (json.data === 2) this.messageForm = 'This email address already exists'
             else if (json.data === 1) this.messageForm = 'An error occured on the server'
         }   
@@ -142,7 +142,7 @@ export default {
             left: 50%;
         transform: translateX(-50%);
 
-        color: #000;
-        z-index: 1;
+        color: green;
+        z-index: 2;
     }
 </style>
