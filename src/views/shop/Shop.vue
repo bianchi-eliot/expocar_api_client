@@ -5,8 +5,8 @@
       Filters
     </a>
   </h3>
-  <FilterShop id="filterElements" style="display: none"></FilterShop>
-  <ElementsShop></ElementsShop>
+  <FilterShop v-if="form_filter" id="filterElements" :pmax="pmax"></FilterShop>
+  <ElementsShop :pieces="pieces"></ElementsShop>
 </template>
 
 <script>
@@ -15,19 +15,21 @@ import ElementsShop from "@/components/shop/ElementsShop";
 
 export default {
   name: 'ShopView',
+  data() {
+    return {form_filter: false, pieces: null, pmax: null}
+  },
   components: {ElementsShop, FilterShop},
   methods: {
     toggleFormFilter() {
-      const form = document.getElementById('filterElements');
-      const button = document.getElementsByClassName('bShowFilter');
-      if(form.style.display === 'none') {
-        form.style.display = ''
-        button.innerText = 'Enlever les filtres'
-      } else {
-        form.style.display = 'none'
-        button.innerText = 'Filters'
-      }
+      this.form_filter = !this.form_filter;
     }
+  },
+  async mounted() {
+    let resp = await fetch('http://localhost:3000/shop');
+    let data = await resp.json();
+    this.pieces = data.data.pieces;
+    this.pmax = data.data.pmax;
+    console.log(this.pieces)
   }
 }
 </script>
