@@ -1,6 +1,7 @@
 <template>
     <main class="home">
         <Recap/>
+        <Chart/>
         <Societes/>
         <Activities/>
         <Services/>
@@ -12,10 +13,11 @@ import Recap from '../components/home/Recap.vue'
 import Societes from '../components/home/Societes.vue'
 import Activities from '../components/home/Activities.vue'
 import Services from '../components/home/Services.vue'
+import Chart from '../components/home/Chart.vue'
 
 export default {
     name: 'HomeView',
-    components: { Recap, Societes, Activities, Services }
+    components: { Recap, Societes, Activities, Services, Chart }
 }
 </script>
 
